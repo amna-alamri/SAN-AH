@@ -1,0 +1,189 @@
+/* ==========================================
+   SAN'AH - ملف التنسيق (نسخة مبسطة)
+   يُضاف في كل صفحة:
+   <link rel="stylesheet" href="style.css">
+   ========================================== */
+
+/* 1) Universal selector: يطبق على كل العناصر */
+* {
+  box-sizing: border-box;
+}
+
+.title-box {
+  background-image: url("title-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1F4E8C;
+  padding: 50px 20px;
+  border-radius: 12px;
+}
+
+.title-box h1 {
+  color: #FFFFFF;
+}
+
+/* 2) Element selector: يطبق على وسم HTML */
+body {
+  font-family: Arial, sans-serif;   /* خط */
+  font-size: 16px;
+  color: #12263F;                   /* لون */
+  background-color: #F7F8F4;        /* خلفية */
+  margin: 0;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: #1F4E8C;
+  text-align: center;               /* نص */
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  color: #12263F;
+}
+
+p {
+  line-height: 1.6;
+  color: #35506E;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 3) ID selector: يطبق على عنصر واحد id="logo" */
+#logo {
+  width: 120px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* 4) Class selector: يطبق على أي عنصر class="card" */
+.card {
+  background-color: #FFFFFF;
+  border: 2px solid #D5E3F1;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  width: 280px;
+  display: inline-block;
+}
+
+.hero {
+  background-color: #E6F0FA;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.button {
+  background-color: #1F4E8C;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* 5) Grouping selector: عدة عناصر بنفس التنسيق */
+header, footer {
+  background-color: #1F4E8C;
+  color: #FFFFFF;
+  padding: 15px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 6) Descendant selector: عنصر داخل عنصر آخر */
+nav ul {
+  list-style-type: none;            /* قائمة */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+/* 7) Attribute selector: حسب نوع الحقل */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #9DBBD9;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #1F4E8C;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* 8) أحداث الروابط (Pseudo-class) */
+a:link    { color: #1F4E8C; text-decoration: none; }        /* رابط عادي */
+a:visited { color: #6B4FA0; }                               /* بعد الزيارة */
+a:hover   { color: #12263F; text-decoration: underline; }   /* عند تمرير الماوس */
+a:active  { color: #7FA6CC; }                               /* عند الضغط */
+
+/* روابط القائمة والتذييل بلون أبيض */
+header a:link, header a:visited, footer a:link, footer a:visited {
+  color: #FFFFFF;
+}
+
+/* 9) Pseudo-element: إضافة نجمة بعد الحقل المطلوب */
+.required::after {
+  content: " *";
+  color: red;
+}
+
+/* 10) الجداول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+}
+
+th {
+  background-color: #1F4E8C;
+  color: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #9DBBD9;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #9DBBD9;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #E6F0FA;
+}
+
+/* 11) تصميم متجاوب للجوال */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+  nav ul li {
+    display: block;
+    margin: 8px 0;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}

@@ -1,10 +1,4 @@
-/* ==========================================
-   SAN'AH - ملف التنسيق (نسخة مبسطة)
-   يُضاف في كل صفحة:
-   <link rel="stylesheet" href="style.css">
-   ========================================== */
-
-/* 1) Universal selector: يطبق على كل العناصر */
+/* 1) Universal selector*/
 * {
   box-sizing: border-box;
 }
@@ -23,7 +17,7 @@
   color: #FFFFFF;
 }
 
-/* 2) Element selector: يطبق على وسم HTML */
+/* 2) Element selector */
 body {
   font-family: Arial, sans-serif;   /* خط */
   font-size: 16px;
@@ -36,7 +30,7 @@ h1 {
   font-family: Georgia, serif;
   font-size: 40px;
   color: #1F4E8C;
-  text-align: center;               /* نص */
+  text-align: center;               /* center */
 }
 
 h2 {
@@ -61,14 +55,14 @@ img {
   height: auto;
 }
 
-/* 3) ID selector: يطبق على عنصر واحد id="logo" */
+/* 3) ID selector: id="logo" */
 #logo {
   width: 70px;
   margin: 0;
   display: block;
 }
 
-/* 4) Class selector: يطبق على أي عنصر class="card" */
+/* 4) Class selector: class="card" */
 .card {
   background-color: #FFFFFF;
   border: 2px solid #D5E3F1;
@@ -93,7 +87,7 @@ img {
   border-radius: 8px;
 }
 
-/* 5) Grouping selector: عدة عناصر بنفس التنسيق */
+/* 5) Grouping selector */
 header, footer {
   background-color: #1F4E8C;
   color: #FFFFFF;
@@ -121,7 +115,7 @@ header {
   letter-spacing: 2px;
 }
 
-/* 6) Descendant selector: عنصر داخل عنصر آخر */
+/* 6) Descendant selector */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -138,7 +132,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* 7) Attribute selector: حسب نوع الحقل */
+/* 7) Attribute selector */
 input[type="text"], input[type="email"], textarea {
   width: 100%;
   padding: 8px;
@@ -155,24 +149,24 @@ input[type="submit"] {
   border-radius: 8px;
 }
 
-/* 8) أحداث الروابط (Pseudo-class) */
-a:link    { color: #1F4E8C; text-decoration: none; }        /* رابط عادي */
-a:visited { color: #6B4FA0; }                               /* بعد الزيارة */
-a:hover   { color: #12263F; text-decoration: underline; }   /* عند تمرير الماوس */
-a:active  { color: #7FA6CC; }                               /* عند الضغط */
+/* (Pseudo-class) */
+a:link    { color: #1F4E8C; text-decoration: none; }        /* normal link */
+a:visited { color: #6B4FA0; }                               /* After visite */
+a:hover   { color: #12263F; text-decoration: underline; }   
+a:active  { color: #7FA6CC; }                               
 
-/* روابط القائمة والتذييل بلون أبيض */
+/*  */
 header a:link, header a:visited, footer a:link, footer a:visited {
   color: #FFFFFF;
 }
 
-/* 9) Pseudo-element: إضافة نجمة بعد الحقل المطلوب */
+/* 9) Pseudo-element:  */
 .required::after {
   content: " *";
   color: red;
 }
 
-/* 10) الجداول */
+/* 10)  */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -196,7 +190,7 @@ tr:nth-child(even) {
   background-color: #E6F0FA;
 }
 
-/* 11) تصميم متجاوب للجوال */
+/* 11)  */
 @media (max-width: 600px) {
   .card {
     width: 100%;

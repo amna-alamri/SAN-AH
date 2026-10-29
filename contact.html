@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SAN'AH</title>
+
+  <!-- External CSS: shared stylesheet used by all pages -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== Header: logo + site name + navigation menu ========== -->
+  <header>
+    <!-- Logo and site name (clicking returns to the home page) -->
+    <a href="index.html" class="brand">
+      <img id="logo" src="logo.png" alt="SAN'AH logo">
+      <span>SAN'AH</span>
+    </a>
+
+    <!-- Navigation menu linking to all pages -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login_and_register.html">Login &amp; Register</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="creators.html">Sellers &amp; Creators</a></li>
+        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
+        <li><a href="share_your_experience.html">Share Your Experience</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p>Have a question or need help?</p>
+
+    <!-- Contact form: the message is sent to an email account (formsubmit.co forwards it) -->
+    <section class="contact-form">
+      <h3>Send Us a Message</h3>
+      <p>Fill in the form below and we will get back to you.</p>
+
+      <form action="https://formsubmit.co/s140640@student.squ.edu.om" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <!-- Hidden settings for formsubmit.co: no captcha page, custom email subject -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New message from the SAN'AH Contact Us form">
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Contact information -->
+    <section class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Email:</strong>
+        <a href="mailto:info@sanah.com">info@sanah.com</a>
+      </p>
+      <p><strong>Phone:</strong> +968 0000 0000</p>
+
+      <p><strong>Instagram:</strong>
+        <a href="https://www.instagram.com/" target="_blank">Follow us on Instagram</a>
+      </p>
+    </section>
+
+    <!-- Frequently asked questions -->
+    <section class="faq">
+      <h3>Frequently Asked Questions</h3>
+
+      <details>
+        <summary>How can I place an order?</summary>
+        <p>Browse our products, choose your favorite items, and add them to your cart.</p>
+      </details>
+
+      <details>
+        <summary>How does delivery work?</summary>
+        <p>Delivery details will be provided when you place your order.</p>
+      </details>
+
+      <details>
+        <summary>What payment methods are available?</summary>
+        <p>Available payment methods will be shown during the checkout process.</p>
+      </details>
+
+      <details>
+        <summary>Can I cancel my order?</summary>
+        <p>Please contact our team as soon as possible to ask about cancelling your order.</p>
+      </details>
+    </section>
+
+    <!-- Guide for new sellers (numbered list) -->
+    <section class="seller-guide">
+      <h3>Join SAN'AH as a Seller</h3>
+
+      <p>Do you create handmade products or run a small local business?
+        Join our community and share your products with more people.
+      </p>
+
+      <ol>
+        <li>Register for an account on SAN'AH.</li>
+        <li>Prepare your product photos and description.</li>
+        <li>Submit your products for review.</li>
+        <li>Once approved, your products can be displayed on our platform.</li>
+      </ol>
+
+      <p>We look forward to supporting your creativity!</p>
+
+      <a href="creators.html">Learn More</a>
+    </section>
+  </main>
+
+  <!-- ========== Footer: project info and quick links ========== -->
+  <footer>
+    <!-- Inline CSS: style written directly on the element -->
+    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
+    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+</body>
+</html>

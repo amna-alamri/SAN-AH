@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sellers &amp; Creators | SAN'AH</title>
+
+  <!-- External CSS: shared stylesheet used by all pages -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== Header: logo + site name + navigation menu ========== -->
+  <header>
+    <!-- Logo and site name (clicking returns to the home page) -->
+    <a href="index.html" class="brand">
+      <img id="logo" src="logo.png" alt="SAN'AH logo">
+      <span>SAN'AH</span>
+    </a>
+
+    <!-- Navigation menu linking to all pages -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login_and_register.html">Login &amp; Register</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="creators.html">Sellers &amp; Creators</a></li>
+        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
+        <li><a href="share_your_experience.html">Share Your Experience</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Sellers &amp; Creators</h2>
+    <p>Meet the creative people behind our local products.</p>
+
+    <!-- Invitation to local creators -->
+    <section class="creators-hero">
+      <h2>Are You a Local Creator?</h2>
+      <p>
+        Turn your creativity into opportunity with SAN'AH.
+        Share your handmade products with the community and
+        let more people discover your work.
+      </p>
+      <a href="contact.html" class="creator-button">Join Our Community</a>
+    </section>
+
+    <!-- Benefits of joining -->
+    <section class="creator-benefits">
+      <h2>Why Join SAN'AH</h2>
+      <div class="benefit">
+        <h3>Reach More Customers</h3>
+        <p>Showcase your products and help more people discover your creations.</p>
+      </div>
+      <div class="benefit">
+        <h3>Share Your Story</h3>
+        <p>Tell customers about your ideas, creativity, and the story behind your products.</p>
+      </div>
+      <div class="benefit">
+        <h3>Support Local Creativity</h3>
+        <p>Become part of a community that celebrates local makers and small businesses.</p>
+      </div>
+    </section>
+
+    <!-- Seller application form: sends the data to httpbin.org -->
+    <section class="seller-registration">
+      <h2>Become a Seller</h2>
+      <p>Tell us a little about yourself and your products.</p>
+
+      <form action="https://httpbin.org/get" method="get">
+
+        <label for="seller-name">Full Name:</label>
+        <input type="text" id="seller-name" name="seller_name" required>
+
+        <label for="seller-email">Email Address:</label>
+        <input type="email" id="seller-email" name="seller_email" required>
+
+        <label for="business-name">Business or Brand Name:</label>
+        <input type="text" id="business-name" name="business_name" required>
+
+        <label for="product-type">Product Category:</label>
+        <select id="product-type" name="product_type" required>
+          <option value="">Choose a category</option>
+          <option value="handmade">Handmade Products</option>
+          <option value="fashion">Fashion and Abayas</option>
+          <option value="beauty">Beauty and Personal Care</option>
+          <option value="food">Food Products</option>
+          <option value="other">Others</option>
+        </select>
+
+        <label for="seller-story">Tell Us About Your Products:</label>
+        <textarea id="seller-story" name="seller_story" rows="4" required></textarea>
+
+        <label>
+          <input type="checkbox" name="agreement" value="yes" required>
+          I confirm that the information provided is correct.
+        </label>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ========== Footer: project info and quick links ========== -->
+  <footer>
+    <!-- Inline CSS: style written directly on the element -->
+    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
+    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+</body>
+</html>

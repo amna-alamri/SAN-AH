@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAN'AH - Login &amp; Register</title>
+
+  <!-- External CSS: shared stylesheet used by all pages -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS: styles that apply to this page only -->
+  <style>
+    /* Spacing and centering for each content section */
+    .section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    /* Larger cards for the two login choices */
+    .choice-card {
+      width: 340px;
+      min-height: 280px;
+      vertical-align: top;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== Header: logo + site name + navigation menu ========== -->
+  <header>
+    <!-- Logo and site name (clicking returns to the home page) -->
+    <a href="index.html" class="brand">
+      <img id="logo" src="logo.png" alt="SAN'AH logo">
+      <span>SAN'AH</span>
+    </a>
+
+    <!-- Navigation menu linking to all pages -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login_and_register.html">Login &amp; Register</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="creators.html">Sellers &amp; Creators</a></li>
+        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
+        <li><a href="share_your_experience.html">Share Your Experience</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== Page banner ========== -->
+  <div class="title-box">
+    <h1>Login &amp; Register</h1>
+    <p class="white-text">Choose how you want to enter SAN'AH.</p>
+  </div>
+
+  <!-- ========== Two ways to enter: each card opens its own page ========== -->
+  <div class="section">
+    <h2>Who are you?</h2>
+
+    <!-- Seller entry: opens the seller login page -->
+    <div class="card card-seller choice-card">
+      <h3>Seller / Creator</h3>
+      <p>Log in or create a shop account to add products and manage your orders.</p>
+      <a class="button" href="seller_login.html">Login as Seller</a>
+    </div>
+
+    <!-- Buyer entry: opens the buyer login page -->
+    <div class="card card-buyer choice-card">
+      <h3>Buyer</h3>
+      <p>Log in or create an account to shop, track orders and share your experience.</p>
+      <a class="button" href="buyer_login.html">Login as Buyer</a>
+    </div>
+  </div>
+
+  <!-- ========== Footer: project info and quick links ========== -->
+  <footer>
+    <!-- Inline CSS: style written directly on the element -->
+    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
+    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+</body>
+</html>

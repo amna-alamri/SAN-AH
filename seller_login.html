@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAN'AH - Seller Login</title>
+
+  <!-- External CSS: shared stylesheet used by all pages -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS: styles that apply to this page only -->
+  <style>
+    /* Spacing and centering for each content section */
+    .section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    /* Row that holds the login box and the register box */
+    .forms-row {
+      display: flex;
+      flex-wrap: wrap;           /* boxes stack on small screens */
+      justify-content: center;
+      align-items: flex-start;
+      gap: 25px;
+    }
+
+    /* White box around each form */
+    .form-box {
+      width: 440px;
+      max-width: 100%;
+      padding: 25px;
+      background-color: #FFFFFF;
+      border: 2px solid #D5E3F1;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    /* Labels sit above their fields */
+    .form-box label {
+      display: block;
+      font-weight: bold;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+
+    /* Extra field types that style.css does not cover */
+    .form-box input[type="password"],
+    .form-box input[type="tel"],
+    .form-box select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #9DBBD9;
+      border-radius: 6px;
+      background-color: #FFFFFF;
+    }
+
+    /* Checkbox label: normal text beside the box */
+    .form-box .inline-label {
+      display: block;
+      font-weight: normal;
+    }
+    .form-box input[type="checkbox"] {
+      width: auto;
+      margin-right: 6px;
+    }
+
+    /* Submit buttons in the forms */
+    .form-box input[type="submit"] {
+      margin-top: 15px;
+    }
+
+    /* Link to switch to the buyer page */
+    .switch-link {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== Header: logo + site name + navigation menu ========== -->
+  <header>
+    <!-- Logo and site name (clicking returns to the home page) -->
+    <a href="index.html" class="brand">
+      <img id="logo" src="logo.png" alt="SAN'AH logo">
+      <span>SAN'AH</span>
+    </a>
+
+    <!-- Navigation menu linking to all pages -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login_and_register.html">Login &amp; Register</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="creators.html">Sellers &amp; Creators</a></li>
+        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
+        <li><a href="share_your_experience.html">Share Your Experience</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== Page banner ========== -->
+  <div class="title-box">
+    <h1>Seller / Creator</h1>
+    <p class="white-text">Log in to manage your products and orders, or create your shop account.</p>
+  </div>
+
+  <!-- ========== Login and register forms ========== -->
+  <div class="section">
+    <div class="forms-row">
+
+      <!-- Seller login form: sends the data to httpbin.org -->
+      <div class="form-box">
+        <h2>Seller Login</h2>
+        <form action="https://httpbin.org/get" method="get">
+
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="seller_email" placeholder="shop@email.com" required>
+
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="seller_password" required>
+
+          <!-- Hidden field: tells the server this is a seller login -->
+          <input type="hidden" name="account_type" value="seller">
+
+          <input type="submit" value="Login">
+
+          <p><a href="#">Forgot password?</a></p>
+        </form>
+      </div>
+
+      <!-- Seller registration form: sends the data to httpbin.org -->
+      <div class="form-box">
+        <h2>Create a Shop Account</h2>
+        <form action="https://httpbin.org/get" method="get">
+
+          <label for="shop-name">Name or shop name</label>
+          <input type="text" id="shop-name" name="shop_name" required>
+
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" name="seller_email" required>
+
+          <label for="reg-phone">Phone number</label>
+          <input type="tel" id="reg-phone" name="seller_phone" required>
+
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" name="seller_password" required>
+
+          <label for="product-type">Product type</label>
+          <select id="product-type" name="product_type">
+            <option value="fashion">Fashion &amp; Clothing</option>
+            <option value="art">Art &amp; Crafts</option>
+            <option value="decor">Home Decor</option>
+            <option value="food">Food</option>
+          </select>
+
+          <label for="city">City</label>
+          <select id="city" name="city">
+            <option value="muscat">Muscat</option>
+            <option value="salalah">Salalah</option>
+            <option value="sohar">Sohar</option>
+            <option value="nizwa">Nizwa</option>
+            <option value="other">Other</option>
+          </select>
+
+          <!-- Terms and privacy checkbox (required) -->
+          <label class="inline-label" for="terms">
+            <input type="checkbox" id="terms" name="terms" value="accepted" required>
+            I accept the terms and privacy policy.
+          </label>
+
+          <input type="hidden" name="account_type" value="seller">
+
+          <input type="submit" value="Create Account">
+          <input type="reset" value="Clear">
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Link to the buyer page -->
+    <p class="switch-link">Shopping instead? <a href="buyer_login.html">Go to Buyer login</a></p>
+  </div>
+
+  <!-- ========== Footer: project info and quick links ========== -->
+  <footer>
+    <!-- Inline CSS: style written directly on the element -->
+    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
+    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+</body>
+</html>

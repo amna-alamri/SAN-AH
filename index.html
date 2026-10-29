@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SAN'AH - Home</title>
-  
-  <!-- CSS خارجي: الملف الذي كتبناه -->
+
+  <!-- External CSS: shared stylesheet used by all pages -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- CSS داخلي: تنسيق خاص بهذه الصفحة فقط -->
+  <!-- Internal CSS: styles that apply to this page only -->
   <style>
+    /* Slogan text under the site name */
     .slogan {
-      font-size: 22px;
-      color: #1F4E8C;
+      font-size: 34px;
       font-style: italic;
+      font-weight: bold;
+      color: #FFFFFF;
     }
+    /* Spacing and centering for each content section */
     .section {
       padding: 30px 20px;
       text-align: center;
@@ -24,125 +27,149 @@
 
 <body>
 
-  
+  <!-- ========== Header: logo + site name + navigation menu ========== -->
   <header>
-  <a href="index.html">
-    <img id="logo" src="logo.png" alt="SAN'AH logo">
-  </a>
+    <!-- Logo and site name (clicking returns to the home page) -->
+    <a href="index.html" class="brand">
+      <img id="logo" src="logo.png" alt="SAN'AH logo">
+      <span>SAN'AH</span>
+    </a>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="login_and_register.html">Login &amp; Register</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="sellers_and_creators.html">Sellers &amp; Creators</a></li>
-      <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
-      <li><a href="share_your_experience.html">Share Your Experience</a></li>
-      <li><a href="about_us.html">About Us</a></li>
-      <li><a href="contact_us.html">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- Navigation menu linking to all pages -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login_and_register.html">Login &amp; Register</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="creators.html">Sellers &amp; Creators</a></li>
+        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
+        <li><a href="share_your_experience.html">Share Your Experience</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- ========== Main Part ========== -->
+  <!-- ========== Main banner: title, slogan, description, search ========== -->
   <div class="title-box">
     <h1>SAN'AH</h1>
-    <p class="slogan">Small businesses, big stories.</p>
-    <p>
+    <p class="slogan white-text">Small businesses, big stories.</p>
+    <p class="white-text">
       SAN'AH is a place for local makers and their products. We connect
       producers and buyers in one simple marketplace.
     </p>
 
-    <!-- نموذج البحث: يرسل البيانات إلى httpbin -->
+    <!-- Search form: sends the data to httpbin.org -->
     <form action="https://httpbin.org/get" method="get">
       <input type="text" name="search" placeholder="Search products or sellers">
       <input type="submit" value="Search">
     </form>
   </div>
 
-  <!-- ========== بطاقتا الدخول ========== -->
+  <!-- ========== Entry cards: join as a seller or a buyer ========== -->
   <div class="section">
     <h2>How would you like to join?</h2>
 
-    <div class="card">
+    <!-- Seller card -->
+    <div class="card card-seller">
       <h3>Seller / Creator</h3>
       <p>List your products in a few easy steps and reach more customers.</p>
-      <a class="button" href="login.html">Sell with SAN'AH</a>
+      <a class="button" href="seller_login.html">Sell with SAN'AH</a>
     </div>
 
-    <div class="card">
+    <!-- Buyer card -->
+    <div class="card card-buyer">
       <h3>Buyer</h3>
       <p>Browse local handmade products and order in one place.</p>
-      <a class="button" href="login.html">Start shopping</a>
+      <a class="button" href="buyer_login.html">Start shopping</a>
     </div>
   </div>
 
-  <!-- ========== التصنيفات ========== -->
+  <!-- ========== Product categories ========== -->
   <div class="section">
     <h2>Browse by category</h2>
 
+    <!-- Category 1: Fashion -->
     <div class="card">
-      <img src="images/fashion.jpg" alt="Fashion and clothing">
-      <h3><a href="products.html">Fashion &amp; Clothing</a></h3>
+      <img src="fashion.jpg" alt="Fashion and clothing">
+      <h3><a href="product.html">Fashion &amp; Clothing</a></h3>
     </div>
 
+    <!-- Category 2: Art and crafts -->
     <div class="card">
-      <img src="images/art.jpg" alt="Art and crafts">
-      <h3><a href="products.html">Art &amp; Crafts</a></h3>
+      <img src="art.jpg" alt="Art and crafts">
+      <h3><a href="product.html">Art &amp; Crafts</a></h3>
     </div>
 
+    <!-- Category 3: Home decor -->
     <div class="card">
-      <img src="images/decor.jpg" alt="Home decor">
-      <h3><a href="products.html">Home Decor</a></h3>
+      <img src="decor.jpg" alt="Home decor">
+      <h3><a href="product.html">Home Decor</a></h3>
     </div>
 
+    <!-- Category 4: Food -->
     <div class="card">
-      <img src="images/food.jpg" alt="Food">
-      <h3><a href="products.html">Food</a></h3>
+      <img src="food.jpg" alt="Food">
+      <h3><a href="product.html">Food</a></h3>
     </div>
   </div>
 
-  <!-- ========== المنتجات المميزة ========== -->
+  <!-- ========== Featured products (each card links to the Products page) ========== -->
   <div class="section">
     <h2>Featured products</h2>
 
-    <div class="card">
-      <img src="images/product1.jpg" alt="Featured product 1">
-      <h3>Product name</h3>
-      <p>By Seller name, City</p>
-      <p>Price: 0.000 OMR</p>
-    </div>
+    <!-- Product 1 -->
+    <a class="card-link" href="product.html">
+      <div class="card">
+        <img src="product1.jpg" alt="Featured product 1">
+        <h3>Handcrafted Omani Pottery Set</h3>
+        <p>By Seller name, City</p>
+        <p>Price: 10.000 OMR</p>
+      </div>
+    </a>
 
-    <div class="card">
-      <img src="images/product2.jpg" alt="Featured product 2">
-      <h3>Product name</h3>
-      <p>By Seller name, City</p>
-      <p>Price: 0.000 OMR</p>
-    </div>
+    <!-- Product 2 -->
+    <a class="card-link" href="product.html">
+      <div class="card">
+        <img src="product2.jpg" alt="Featured product 2">
+        <h3>Handcrafted Crochet Amigurumi Toys</h3>
+        <p>By Seller name, City</p>
+        <p>Price: 3.000 OMR</p>
+      </div>
+    </a>
 
-    <div class="card">
-      <img src="images/product3.jpg" alt="Featured product 3">
-      <h3>Product name</h3>
-      <p>By Seller name, City</p>
-      <p>Price: 0.000 OMR</p>
-    </div>
+    <!-- Product 3 -->
+    <a class="card-link" href="product.html">
+      <div class="card">
+        <img src="product3.jpg" alt="Featured product 3">
+        <h3>Organic Artisanal Jams &amp; Raw Honey</h3>
+        <p>By Seller name, City</p>
+        <p>Price: 5.000 OMR</p>
+      </div>
+    </a>
   </div>
 
-  <!-- ========== Featured seller ========== -->
+  <!-- ========== Featured seller: photo, short story and link ========== -->
   <div class="hero">
     <h2>Featured seller</h2>
+
+    <!-- Seller photo -->
+    <img class="seller-img" src="seller.jpg" alt="Featured seller">
+
+    <!-- Seller story -->
     <p>
       Write a short story here about one seller: who they are, what inspires
       their work, and how their products are made.
     </p>
-    <a class="button" href="sellers.html">Meet our sellers</a>
+    <a class="button" href="creators.html">Meet our sellers</a>
   </div>
 
-  <!-- ========== Footer ========== -->
+  <!-- ========== Footer: project info and quick links ========== -->
   <footer>
+    <!-- Inline CSS: style written directly on the element -->
     <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
     <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
-    <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
   </footer>
 
 </body>

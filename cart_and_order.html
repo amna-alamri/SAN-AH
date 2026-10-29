@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAN'AH - Cart &amp; Order</title>
+
+  <!-- External CSS: shared stylesheet used by all pages -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS: styles that apply to this page only -->
+  <style>
+    /* Spacing and centering for each content section */
+    .section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    /* Wrapper: centers a table and lets it scroll on small screens */
+    .table-box {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    /* Cart table: separate borders with space between cells */
+    .cart-table {
+      border: 2px solid #1F4E8C;
+      border-collapse: separate;
+      border-spacing: 3px;
+    }
+
+    /* Small product picture inside the cart table */
+    .cart-img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 0 auto;
+    }
+
+    /* Quantity field is narrow */
+    .cart-table input[type="number"] {
+      width: 70px;
+      padding: 6px;
+      border: 1px solid #9DBBD9;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    /* Red remove button */
+    .remove-btn {
+      background-color: #B3261E;
+      color: #FFFFFF;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Total rows at the bottom of the cart table */
+    .total-row td {
+      font-weight: bold;
+      background-color: #E6F0FA;
+      text-align: right;
+    }
+
+    /* White box that holds the delivery and payment form fields */
+    .form-box {
+      max-width: 600px;
+      margin: 20px auto 0 auto;
+      padding: 25px;
+      background-color: #FFFFFF;
+      border: 2px solid #D5E3F1;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    /* Labels sit above their fields */
+    .form-box label {
+      display: block;
+      font-weight: bold;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+
+    /* Drop-down list */
+    .form-box select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #9DBBD9;
+      border-radius: 6px;
+      background-color: #FFFFFF;
+    }
+
+    /* Comment box */
+    .form-box textarea {
+      height: 80px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Group box around radio buttons */
+    .form-box fieldset {
+      border: 1px solid #9DBBD9;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    /* Radio buttons: normal size, label beside them */
+    .form-box input[type="radio"] {
+      width: auto;
+      margin-right: 6px;
+    }
+    .form-box .inline-label {
+      display: inline-block;
+      font-weight: normal;
+      margin-right: 14px;
+    }
+
+    /* Reset button looks different from the submit button */
+    .form-box input[type="reset"] {
+      background-color: #9DBBD9;
+      color: #12263F;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 8px;
+      margin-left: 8px;
+    }
+
+    /* Order status column colors */
+    .done   { color: #1E7B34; font-weight: bold; }
+    .active { color: #1F4E8C; font-weight: bold; }
+    .waiting{ color: #7A7A7A; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== Header: logo + site name + navigation menu ========== -->
+  <header>
+    <!-- Logo and site name (clicking returns to the home page) -->
+    <a href="index.html" class="brand">
+      <img id="logo" src="logo.png" alt="SAN'AH logo">
+      <span>SAN'AH</span>
+    </a>
+
+    <!-- Navigation menu linking to all pages -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login_and_register.html">Login &amp; Register</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="creators.html">Sellers &amp; Creators</a></li>
+        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
+        <li><a href="share_your_experience.html">Share Your Experience</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== Page banner ========== -->
+  <div class="title-box">
+    <h1>Your Cart</h1>
+    <p class="white-text">Check your items, choose delivery and payment, then place your order.</p>
+  </div>
+
+  <!-- ========== Cart and order form: all values are sent to httpbin.org ========== -->
+  <div class="section">
+    <h2>Cart Items</h2>
+
+    <form action="https://httpbin.org/get" method="get">
+
+      <!-- Cart table -->
+      <div class="table-box">
+        <table class="cart-table">
+
+          <!-- Column headings -->
+          <tr>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Price (OMR)</th>
+            <th>Quantity</th>
+            <th>Subtotal (OMR)</th>
+            <th>Remove</th>
+          </tr>
+
+          <!-- Cart item 1 -->
+          <tr>
+            <td><img class="cart-img" src="product1.jpg" alt="Pottery set"></td>
+            <td>Handcrafted Omani Pottery Set</td>
+            <td>10.000</td>
+            <td><input type="number" name="qty_pottery" value="1" min="1" max="10"></td>
+            <td>10.000</td>
+            <td><button class="remove-btn" type="submit" name="remove" value="pottery">Remove</button></td>
+          </tr>
+
+          <!-- Cart item 2 -->
+          <tr>
+            <td><img class="cart-img" src="product2.jpg" alt="Crochet toys"></td>
+            <td>Handcrafted Crochet Amigurumi Toys</td>
+            <td>3.000</td>
+            <td><input type="number" name="qty_toys" value="2" min="1" max="10"></td>
+            <td>6.000</td>
+            <td><button class="remove-btn" type="submit" name="remove" value="toys">Remove</button></td>
+          </tr>
+
+          <!-- Order summary rows: label cell merged across 4 columns (colspan) -->
+          <tr class="total-row">
+            <td colspan="4">Items price</td>
+            <td colspan="2">16.000</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="4">Delivery fee</td>
+            <td colspan="2">2.000</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="4">Total</td>
+            <td colspan="2">18.000 OMR</td>
+          </tr>
+
+        </table>
+      </div>
+
+      <!-- Delivery and payment details -->
+      <div class="form-box">
+        <h2>Delivery Details</h2>
+
+        <!-- Radio buttons: delivery or pickup -->
+        <fieldset>
+          <legend>Receiving method</legend>
+          <input type="radio" id="delivery" name="delivery_method" value="delivery" checked>
+          <label class="inline-label" for="delivery">Delivery</label>
+
+          <input type="radio" id="pickup" name="delivery_method" value="pickup">
+          <label class="inline-label" for="pickup">Pickup from seller</label>
+        </fieldset>
+
+        <!-- Text fields: name and address -->
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="customer_name" required>
+
+        <label for="address">Delivery address</label>
+        <textarea id="address" name="address" placeholder="Wilayat, area, street, house number"></textarea>
+
+        <!-- Drop-down list: city -->
+        <label for="city">City</label>
+        <select id="city" name="city">
+          <option value="muscat">Muscat</option>
+          <option value="salalah">Salalah</option>
+          <option value="sohar">Sohar</option>
+          <option value="nizwa">Nizwa</option>
+          <option value="other">Other</option>
+        </select>
+
+        <h2>Payment Method</h2>
+
+        <!-- Radio buttons: cash on delivery or online payment -->
+        <fieldset>
+          <legend>How would you like to pay?</legend>
+          <input type="radio" id="cash" name="payment_method" value="cash_on_delivery" checked>
+          <label class="inline-label" for="cash">Cash on delivery</label>
+
+          <input type="radio" id="online" name="payment_method" value="online">
+          <label class="inline-label" for="online">Online payment</label>
+        </fieldset>
+
+        <!-- Buttons: place order and clear -->
+        <p>
+          <input type="submit" value="Place Order">
+          <input type="reset" value="Clear">
+        </p>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ========== Order tracking ========== -->
+  <div class="hero">
+    <h2>Order Tracking</h2>
+
+    <div class="table-box">
+      <table>
+
+        <!-- Title cell merged across all columns -->
+        <tr>
+          <th colspan="3">Order #SA-1001</th>
+        </tr>
+
+        <!-- Column headings -->
+        <tr>
+          <th>Step</th>
+          <th>Status</th>
+          <th>Details</th>
+        </tr>
+
+        <!-- Status rows: preparing, ready, delivered -->
+        <tr>
+          <td>1</td>
+          <td class="done">Preparing</td>
+          <td>The seller is preparing your order.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="active">Ready</td>
+          <td>Your order is packed and ready.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="waiting">Delivered</td>
+          <td>Waiting for delivery or pickup.</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <p>Looking for more products? <a href="product.html">Continue shopping</a></p>
+  </div>
+
+  <!-- ========== Footer: project info and quick links ========== -->
+  <footer>
+    <!-- Inline CSS: style written directly on the element -->
+    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
+    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+</body>
+</html>

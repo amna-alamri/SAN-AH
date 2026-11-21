@@ -3,202 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SAN'AH - About Us</title>
-
-  <!-- External CSS: shared stylesheet used by all pages -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Internal CSS: styles that apply to this page only -->
-  <style>
-    /* Spacing and centering for each content section */
-    .section {
-      padding: 30px 20px;
-      text-align: center;
-    }
-    /* Keeps long paragraphs a comfortable reading width */
-    .text-block {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    /* Round team member photos */
-    .team-photo {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 10px auto;
-      display: block;
-    }
-  </style>
+  <title>About Us | SAN'AH</title>
+  <!-- Bootstrap 5 is the ONLY stylesheet used on this site (no custom CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<body class="bg-light">
 
-<body>
+  <!-- Responsive Bootstrap navigation bar: collapses into a hamburger menu on small screens -->
+  <nav class="navbar navbar-expand-xl navbar-light bg-success-subtle sticky-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center text-success-emphasis" href="index.html">
+        <img src="logo.png" alt="SAN'AH logo" width="55" height="55" class="me-2">
+        <span class="fw-bold fs-4">SAN'AH</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="login_and_register.html">Login &amp; Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="creators.html">Sellers &amp; Creators</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart_and_order.html">Cart &amp; Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="share_your_experience.html">Share Your Experience</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about_us.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="questionnaire.html">Questionnaire</a></li>
+            <li><a class="dropdown-item" href="calculate.html">Shopping Calculator</a></li>
+            <li><a class="dropdown-item" href="funpage.html">Fun Page</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- ========== Header: logo + site name + navigation menu ========== -->
-  <header>
-    <!-- Logo and site name (clicking returns to the home page) -->
-    <a href="index.html" class="brand">
-      <img id="logo" src="logo.png" alt="SAN'AH logo">
-      <span>SAN'AH</span>
-    </a>
+  <main>
+    <section class="bg-success-subtle text-success-emphasis text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold">About Us</h1>
+        <p class="lead mb-0">The story behind SAN'AH and the people who built it.</p>
+      </div>
+    </section>
 
-    <!-- Navigation menu linking to all pages -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login_and_register.html">Login &amp; Register</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="creators.html">Sellers &amp; Creators</a></li>
-        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
-        <li><a href="share_your_experience.html">Share Your Experience</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <section class="container py-5">
+      <h2 class="text-success-emphasis text-center mb-4">Our Story</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-5"><img class="img-fluid rounded shadow-sm" src="story.jpg" alt="Local makers at work"></div>
+        <div class="col-12 col-md-7">
+          <p>Many producers have wonderful, unique products, but they do not have the time to promote and sell them. SAN'AH was created to solve this problem.</p>
+          <p>Our platform connects local producers, small business owners and buyers. Sellers can showcase their products with ease, and buyers can discover handcrafted and locally made goods in one simple place.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- ========== Page banner ========== -->
-  <div class="title-box">
-    <h1>About Us</h1>
-    <p class="white-text">The story behind SAN'AH and the people who built it.</p>
-  </div>
+    <section class="container-fluid bg-success-subtle py-5">
+      <div class="container">
+        <h2 class="text-success-emphasis text-center mb-4">Our Vision and Mission</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6"><div class="card h-100 border-0 shadow-sm"><div class="card-body">
+            <h3 class="h4 text-success-emphasis">Vision</h3>
+            <p class="mb-0">A thriving local economy where every small maker has a stage for their stories.</p></div></div></div>
+          <div class="col-12 col-md-6"><div class="card h-100 border-0 shadow-sm"><div class="card-body">
+            <h3 class="h4 text-success-emphasis">Mission</h3>
+            <ul class="mb-0"><li>Make market access easy for producers.</li><li>Support small enterprises.</li>
+              <li>Revitalize the local economy.</li><li>Create new jobs.</li></ul></div></div></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ========== Story of the project: image on the left, text on the right ========== -->
-<div class="section">
-<h2>Our Story</h2>
+    <section class="container py-5 text-center">
+      <h2 class="text-success-emphasis mb-4">Meet the Team</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-4"><div class="card h-100 border-0 shadow-sm"><div class="card-body">
+          <img class="rounded-circle mb-3" src="team1.png" alt="AlGalia Almasroori" width="150" height="150">
+          <h3 class="h5">AlGalia Almasroori</h3><p class="mb-1">ID: 146541</p><p class="text-secondary mb-0">SQU, College of Science, Statistics.</p></div></div></div>
+        <div class="col-12 col-sm-6 col-lg-4"><div class="card h-100 border-0 shadow-sm"><div class="card-body">
+          <img class="rounded-circle mb-3" src="team2.png" alt="Amna AlAmri" width="150" height="150">
+          <h3 class="h5">Amna AlAmri</h3><p class="mb-1">ID: 140640</p><p class="text-secondary mb-0">SQU, College of Science, Computer Science.</p></div></div></div>
+      </div>
+    </section>
 
-<div class="story-box">
-    <!-- Story image (left) -->
-    <img class="story-img" src="story.jpg" alt="Local makers at work">
+    <section class="container pb-5">
+      <h2 class="text-success-emphasis text-center mb-4">Team Roles</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped bg-white shadow-sm">
+          <thead class="table-success">
+            <tr><th colspan="3" class="text-center">SAN'AH Project Team</th></tr>
+            <tr><th>Name</th><th>Role</th><th>Email</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>AlGalia Abdullah Almasroori</td><td>Responsible for designing the Products page, Sellers and Creators page, and Contact Us page</td>
+              <td><a class="link-success" href="mailto:s146541@student.squ.edu.om">s146541@student.squ.edu.om</a></td></tr>
+            <tr><td>Amna Nabil AlAmri</td><td>Responsible for designing the Home page, Login and Register pages, Share Your Experience and About Us page</td>
+              <td><a class="link-success" href="mailto:s140640@student.squ.edu.om">s140640@student.squ.edu.om</a></td></tr>
+            <tr><td colspan="3" class="text-center">Course: COMP3700 - Section 01 - FALL26</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <!-- Story text (right) -->
-    <div class="story-text">
-    <p>
-        Many producers have wonderful, unique products, but they do not have
-        the time to promote and sell them. SAN'AH was created to solve this
-        problem.
+    <section class="container-fluid bg-success-subtle py-5 text-center">
+      <div class="container">
+        <h2 class="text-success-emphasis">Get in Touch</h2>
+        <p>Have a question or want to join as a seller? Send us an email:</p>
+        <p><a class="link-success" href="mailto:s140640@student.squ.edu.om?subject=SAN'AH%20Inquiry">s140640@student.squ.edu.om</a></p>
+        <a class="btn btn-success" href="contact.html">Go to Contact Form</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-success-subtle text-success-emphasis text-center py-4 mt-5">
+    <p class="mb-1">SAN'AH - A place for local makers and their products.</p>
+    <p class="mb-1">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p class="mb-0">
+      <a class="link-success" href="about_us.html">About Us</a> |
+      <a class="link-success" href="contact.html">Contact Us</a>
     </p>
-    <p>
-        Our platform connects local producers, small business owners and
-        buyers. Sellers can showcase their products with ease, and buyers can
-        discover handcrafted and locally made goods in one simple place.
-    </p>
-    </div>
-</div>
-</div>
-
-  <!-- ========== Vision and mission ========== -->
-<div class="hero">
-  <h2>Our Vision and Mission</h2>
-
-  <!-- Container: puts the two cards side by side with equal height -->
-  <div class="vm-box">
-
-    <!-- Vision card -->
-    <div class="card vm-card">
-      <h3>Vision</h3>
-      <p>A thriving local economy where every small maker has a stage for their stories.</p>
-    </div>
-
-    <!-- Mission card with a list of goals -->
-    <div class="card vm-card">
-      <h3>Mission</h3>
-      <ul class="vm-list">
-        <li>Make market access easy for producers.</li>
-        <li>Support small enterprises.</li>
-        <li>Revitalize the local economy.</li>
-        <li>Create new jobs.</li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-  <!-- ========== Team introduction cards ========== -->
-  <div class="section">
-    <h2>Meet the Team</h2>
-
-    <!-- Team member 1 -->
-    <div class="card">
-      <img class="team-photo" src="team1.png" alt="AlGalia Almasroori">
-      <h3>AlGalia Almasroori</h3>
-      <p>ID: 146541</p>
-      <p>SQU, College of Science, Statistics.</p>
-    </div>
-
-    <!-- Team member 2 -->
-    <div class="card">
-      <img class="team-photo" src="team2.png" alt="Amna AlAmri">
-      <h3>Amna AlAmri</h3>
-      <p>ID: 140640</p>
-      <p>SQU, College of Science, Computer Science.</p>
-    </div>
-  </div>
-
-  <!-- ========== Team roles table ========== -->
-<div class="section">
-  <h2>Team Roles</h2>
-
-  <div class="table-box">
-    <table class="roles-table">
-
-      <!-- Table title: one cell merged across all 3 columns (colspan) -->
-      <tr>
-        <th colspan="3">SAN'AH Project Team</th>
-      </tr>
-
-      <!-- Column headings -->
-      <tr>
-        <th>Name</th>
-        <th>Role</th>
-        <th>Email</th>
-      </tr>
-
-      <!-- Team member 1 -->
-      <tr>
-        <td>AlGalia Abdullah Almasroori</td>
-        <td>Responsible for designing the Products page, Sellers and Creators page, and Contact Us page</td>
-        <td><a href="mailto:s146541@student.squ.edu.om">s146541@student.squ.edu.om</a></td>
-      </tr>
-
-      <!-- Team member 2 -->
-      <tr>
-        <td>Amna Nabil AlAmri</td>
-        <td>Responsible for designing the Home page, Login and Register pages, Share Your Experience and About Us page</td>
-        <td><a href="mailto:s140640@student.squ.edu.om">s140640@student.squ.edu.om</a></td>
-      </tr>
-
-      <!-- Last row: one merged cell across all columns -->
-      <tr>
-        <td colspan="3">Course: COMP3700 - Section 01 - FALL26</td>
-      </tr>
-
-    </table>
-  </div>
-</div>
-
-  <!-- ========== Contact by email ========== -->
-  <div class="hero">
-    <h2>Get in Touch</h2>
-    <p>Have a question or want to join as a seller? Send us an email:</p>
-
-    <!-- Email link: opens the user's mail program (mailto) -->
-    <p>
-      <a href="mailto:s140640@student.squ.edu.om?subject=SAN'AH%20Inquiry">s140640@student.squ.edu.om</a>
-    </p>
-
-    <!-- Link to the Contact Us form page -->
-    <a class="button" href="contact.html">Go to Contact Form</a>
-  </div>
-
-  <!-- ========== Footer: project info and quick links ========== -->
-  <footer>
-    <!-- Inline CSS: style written directly on the element -->
-    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
-    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
-    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

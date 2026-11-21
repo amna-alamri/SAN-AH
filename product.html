@@ -2,123 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products | SAN'AH</title>
-
-  <!-- External CSS: shared stylesheet used by all pages -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap 5 is the ONLY stylesheet used on this site (no custom CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<body class="bg-light">
 
-<body>
+  <!-- Responsive Bootstrap navigation bar: collapses into a hamburger menu on small screens -->
+  <nav class="navbar navbar-expand-xl navbar-light bg-success-subtle sticky-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center text-success-emphasis" href="index.html">
+        <img src="logo.png" alt="SAN'AH logo" width="55" height="55" class="me-2">
+        <span class="fw-bold fs-4">SAN'AH</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="login_and_register.html">Login &amp; Register</a></li>
+          <li class="nav-item"><a class="nav-link active" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="creators.html">Sellers &amp; Creators</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart_and_order.html">Cart &amp; Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="share_your_experience.html">Share Your Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="questionnaire.html">Questionnaire</a></li>
+            <li><a class="dropdown-item" href="calculate.html">Shopping Calculator</a></li>
+            <li><a class="dropdown-item" href="funpage.html">Fun Page</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- ========== Header: logo + site name + navigation menu ========== -->
-  <header>
-    <!-- Logo and site name (clicking returns to the home page) -->
-    <a href="index.html" class="brand">
-      <img id="logo" src="logo.png" alt="SAN'AH logo">
-      <span>SAN'AH</span>
-    </a>
-
-    <!-- Navigation menu linking to all pages -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login_and_register.html">Login &amp; Register</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="creators.html">Sellers &amp; Creators</a></li>
-        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
-        <li><a href="share_your_experience.html">Share Your Experience</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="products-page">
-
-    <!-- Page introduction -->
-    <section class="products-hero">
-      <h2>Discover Local Products</h2>
-      <p>
-        Explore unique creations made with care by local makers and small businesses.
-      </p>
-    </section>
-
-    <!-- Category links: each one jumps to its product below -->
-    <section class="product-categories">
-      <h2>Explore Categories</h2>
-
-      <div class="category-list">
-        <a href="#fashion">
-          <img src="fashion1.jpg" alt="Fashion and Clothing">
-          <h3>Fashion &amp; Clothing</h3>
-        </a>
-        <a href="#crafts">
-          <img src="handmade1.jpg" alt="Art and Crafts">
-          <h3>Art &amp; Crafts</h3>
-        </a>
-        <a href="#home-decor">
-          <img src="decor1.jpg" alt="Home Decor">
-          <h3>Home Decor</h3>
-        </a>
-        <a href="#food">
-          <img src="food1.jpg" alt="Local Food Products">
-          <h3>Local Food Products</h3>
-        </a>
+  <main>
+    <section class="bg-success-subtle text-success-emphasis text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Discover Local Products</h1>
+        <p class="lead mb-0">Explore unique creations made with care by local makers and small businesses.</p>
       </div>
     </section>
 
-    <!-- Products: "Add to cart" is a link to the cart page (no JavaScript) -->
-    <section class="products-section">
-      <h2>Our Products</h2>
-      <div class="product-grid">
-
-        <article class="product-card" id="fashion">
-          <img src="abayaa.jpg" alt="Abaya">
-          <h3>Abaya</h3>
-          <p><strong>Seller:</strong> Local Fashion Studio</p>
-          <p class="product-price">Price: To be announced</p>
-          <a href="cart_and_order.html">Add to cart</a>
-        </article>
-
-        <article class="product-card" id="crafts">
-          <img src="handmade2.jpg" alt="Handmade Craft">
-          <h3>Handmade Craft</h3>
-          <p>A unique handmade creation made with care.</p>
-          <p><strong>Seller:</strong> Creative Hands</p>
-          <p class="product-price">Price: To be announced</p>
-          <a href="cart_and_order.html">Add to cart</a>
-        </article>
-
-        <article class="product-card" id="home-decor">
-          <img src="decor2.jpeg" alt="Home Decoration">
-          <h3>Home Decoration</h3>
-          <p>A decoration item to add character to your home.</p>
-          <p><strong>Seller:</strong> Local Decor Studio</p>
-          <p class="product-price">Price: To be announced</p>
-          <a href="cart_and_order.html">Add to cart</a>
-        </article>
-
-        <article class="product-card" id="food">
-          <img src="food2.jpg" alt="Local Food Product">
-          <h3>Local Food Product</h3>
-          <p>A locally made food product from a small business.</p>
-          <p><strong>Seller:</strong> Local Food Makers</p>
-          <p class="product-price">Price: To be announced</p>
-          <a href="cart_and_order.html">Add to cart</a>
-        </article>
-
+    <section class="container py-5 text-center">
+      <h2 class="text-success-emphasis mb-4">Explore Categories</h2>
+      <div class="row g-4">
+        <div class="col-6 col-lg-3">
+          <a href="#fashion" class="text-decoration-none">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="fashion1.jpg" class="card-img-top" alt="Fashion &amp; Clothing">
+              <div class="card-body"><h3 class="h6 link-success mb-0">Fashion &amp; Clothing</h3></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="#crafts" class="text-decoration-none">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="handmade1.jpg" class="card-img-top" alt="Art &amp; Crafts">
+              <div class="card-body"><h3 class="h6 link-success mb-0">Art &amp; Crafts</h3></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="#home-decor" class="text-decoration-none">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="decor1.jpg" class="card-img-top" alt="Home Decor">
+              <div class="card-body"><h3 class="h6 link-success mb-0">Home Decor</h3></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="#food" class="text-decoration-none">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="food1.jpg" class="card-img-top" alt="Local Food Products">
+              <div class="card-body"><h3 class="h6 link-success mb-0">Local Food Products</h3></div>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
+
+    <section class="container pb-5 text-center">
+      <h2 class="text-success-emphasis mb-4">Our Products</h2>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3" id="fashion">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="abayaa.jpg" class="card-img-top" alt="Abaya">
+            <div class="card-body">
+              <h3 class="h5 card-title">Abaya</h3>
+              <p class="card-text text-secondary mb-1"><strong>Seller:</strong> Local Fashion Studio</p>
+              <p class="fw-bold text-success-emphasis">Price: To be announced</p>
+            </div>
+            <div class="card-footer bg-white border-0 d-flex gap-2">
+              <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal" data-title="Abaya" data-text="A graceful abaya from a local fashion studio."
+                      data-seller="Local Fashion Studio" data-img="abayaa.jpg">Quick view</button>
+              <a class="btn btn-success btn-sm" href="cart_and_order.html">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" id="crafts">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="handmade2.jpg" class="card-img-top" alt="Handmade Craft">
+            <div class="card-body">
+              <h3 class="h5 card-title">Handmade Craft</h3>
+              <p class="card-text text-secondary mb-1"><strong>Seller:</strong> Creative Hands</p>
+              <p class="fw-bold text-success-emphasis">Price: To be announced</p>
+            </div>
+            <div class="card-footer bg-white border-0 d-flex gap-2">
+              <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal" data-title="Handmade Craft" data-text="A unique handmade creation made with care."
+                      data-seller="Creative Hands" data-img="handmade2.jpg">Quick view</button>
+              <a class="btn btn-success btn-sm" href="cart_and_order.html">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" id="home-decor">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="decor2.jpeg" class="card-img-top" alt="Home Decoration">
+            <div class="card-body">
+              <h3 class="h5 card-title">Home Decoration</h3>
+              <p class="card-text text-secondary mb-1"><strong>Seller:</strong> Local Decor Studio</p>
+              <p class="fw-bold text-success-emphasis">Price: To be announced</p>
+            </div>
+            <div class="card-footer bg-white border-0 d-flex gap-2">
+              <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal" data-title="Home Decoration" data-text="A decoration item to add character to your home."
+                      data-seller="Local Decor Studio" data-img="decor2.jpeg">Quick view</button>
+              <a class="btn btn-success btn-sm" href="cart_and_order.html">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" id="food">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="food2.jpg" class="card-img-top" alt="Local Food Product">
+            <div class="card-body">
+              <h3 class="h5 card-title">Local Food Product</h3>
+              <p class="card-text text-secondary mb-1"><strong>Seller:</strong> Local Food Makers</p>
+              <p class="fw-bold text-success-emphasis">Price: To be announced</p>
+            </div>
+            <div class="card-footer bg-white border-0 d-flex gap-2">
+              <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal" data-title="Local Food Product" data-text="A locally made food product from a small business."
+                      data-seller="Local Food Makers" data-img="food2.jpg">Quick view</button>
+              <a class="btn btn-success btn-sm" href="cart_and_order.html">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap modal (interactive component) filled by js/products.js -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="modalTitle"></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalImg" src="" alt="" class="img-fluid rounded mb-3">
+            <p id="modalText"></p>
+            <p class="mb-0"><strong>Seller:</strong> <span id="modalSeller"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a class="btn btn-success" href="cart_and_order.html">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <!-- ========== Footer: project info and quick links ========== -->
-  <footer>
-    <!-- Inline CSS: style written directly on the element -->
-    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
-    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
-    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+  <footer class="bg-success-subtle text-success-emphasis text-center py-4 mt-5">
+    <p class="mb-1">SAN'AH - A place for local makers and their products.</p>
+    <p class="mb-1">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p class="mb-0">
+      <a class="link-success" href="about_us.html">About Us</a> |
+      <a class="link-success" href="contact.html">Contact Us</a>
+    </p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
 </body>
 </html>

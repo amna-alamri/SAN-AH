@@ -5,181 +5,276 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SAN'AH - Home</title>
 
-  <!-- External CSS: shared stylesheet used by all pages -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap 5 is the ONLY stylesheet used on this site -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Internal CSS: styles that apply to this page only -->
-  <style>
-    /* Slogan text under the site name */
-    .slogan {
-      font-size: 34px;
-      font-style: italic;
-      font-weight: bold;
-      color: #FFFFFF;
-    }
-    /* Spacing and centering for each content section */
-    .section {
-      padding: 30px 20px;
-      text-align: center;
-    }
-  </style>
 </head>
 
-<body>
+<body class="bg-light">
 
-  <!-- ========== Header: logo + site name + navigation menu ========== -->
-  <header>
-    <!-- Logo and site name (clicking returns to the home page) -->
-    <a href="index.html" class="brand">
-      <img id="logo" src="logo.png" alt="SAN'AH logo">
-      <span>SAN'AH</span>
-    </a>
-
-    <!-- Navigation menu linking to all pages -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login_and_register.html">Login &amp; Register</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="creators.html">Sellers &amp; Creators</a></li>
-        <li><a href="cart_and_order.html">Cart &amp; Order</a></li>
-        <li><a href="share_your_experience.html">Share Your Experience</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ========== Main banner: title, slogan, description, search ========== -->
-  <div class="title-box">
-    <h1>SAN'AH</h1>
-    <p class="slogan white-text">Small businesses, big stories.</p>
-    <p class="white-text">
-      SAN'AH is a place for local makers and their products. We connect
-      producers and buyers in one simple marketplace.
-    </p>
-
-    <!-- Search form: sends the data to httpbin.org -->
-    <form action="https://httpbin.org/get" method="get">
-      <input type="text" name="search" placeholder="Search products or sellers">
-      <input type="submit" value="Search">
-    </form>
-  </div>
-
-  <!-- ========== Entry cards: join as a seller or a buyer ========== -->
-  <div class="section">
-    <h2>How would you like to join?</h2>
-
-    <!-- Seller card -->
-    <div class="card card-seller">
-      <h3>Seller / Creator</h3>
-      <p>List your products in a few easy steps and reach more customers.</p>
-      <a class="button" href="seller_login.html">Sell with SAN'AH</a>
-    </div>
-
-    <!-- Buyer card -->
-    <div class="card card-buyer">
-      <h3>Buyer</h3>
-      <p>Browse local handmade products and order in one place.</p>
-      <a class="button" href="buyer_login.html">Start shopping</a>
-    </div>
-  </div>
-
-  <!-- ========== Product categories ========== -->
-  <div class="section">
-    <h2>Browse by category</h2>
-
-    <!-- Category 1: Fashion -->
-    <div class="card">
-      <img src="fashion.jpg" alt="Fashion and clothing">
-      <h3><a href="product.html">Fashion &amp; Clothing</a></h3>
-    </div>
-
-    <!-- Category 2: Art and crafts -->
-    <div class="card">
-      <img src="art.jpg" alt="Art and crafts">
-      <h3><a href="product.html">Art &amp; Crafts</a></h3>
-    </div>
-
-    <!-- Category 3: Home decor -->
-    <div class="card">
-      <img src="decor.jpg" alt="Home decor">
-      <h3><a href="product.html">Home Decor</a></h3>
-    </div>
-
-    <!-- Category 4: Food -->
-    <div class="card">
-      <img src="food.jpg" alt="Food">
-      <h3><a href="product.html">Food</a></h3>
-    </div>
-  </div>
-
-  <!-- ========== Featured products (each card links to the Products page) ========== -->
-  <div class="section">
-    <h2>Featured products</h2>
-
-    <!-- Product 1 -->
-    <a class="card-link" href="product.html">
-      <div class="card">
-        <img src="product1.jpg" alt="Featured product 1">
-        <h3>Handcrafted Omani Pottery Set</h3>
-        <p>By Teen and Athar, Bahla</p>
-        <p>Price: 10.000 OMR</p>
+  <!-- Responsive Bootstrap navigation bar -->
+     <nav class="navbar navbar-expand-xl navbar-light bg-success-subtle sticky-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center text-success-emphasis" href="index.html">
+        <img src="logo.png" alt="SAN'AH logo" width="55" height="55" class="me-2">
+        <span class="fw-bold fs-4">SAN'AH</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="login_and_register.html">Login &amp; Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="creators.html">Sellers &amp; Creators</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart_and_order.html">Cart &amp; Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="share_your_experience.html">Share Your Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="questionnaire.html">Questionnaire</a></li>
+            <li><a class="dropdown-item" href="calculate.html">Shopping Calculator</a></li>
+            <li><a class="dropdown-item" href="funpage.html">Fun Page</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </a>
+    </div>
+  </nav>
 
-    <!-- Product 2 -->
-    <a class="card-link" href="product.html">
-      <div class="card">
-        <img src="product2.jpg" alt="Featured product 2">
-        <h3>Handcrafted Crochet Amigurumi Toys</h3>
-        <p>By Yarn and Stories, Muscat</p>
-        <p>Price: 3.000 OMR</p>
+   <main>
+    <section class="bg-success-subtle text-success-emphasis text-center py-5">
+      <div class="container">
+        <h1 class="display-1 fw-bold">SAN'AH</h1>
+        <p class="fs-3 fw-semibold fst-italic">Small businesses, big stories.</p>
+        <p class="lead">
+          SAN'AH is a place for local makers and their products. We connect
+          producers and buyers in one simple marketplace.
+        </p>
+
+        <form class="row justify-content-center g-2 mt-4" action="https://httpbin.org/get" method="get">
+          <div class="col-12 col-md-6">
+            <label for="homeSearch" class="visually-hidden">Search products or sellers</label>
+            <input class="form-control form-control-lg" type="text" id="homeSearch"
+                  name="search" placeholder="Search products or sellers">
+          </div>
+          <div class="col-12 col-md-auto">
+            <button class="btn btn-success btn-lg w-100" type="submit">Search</button>
+          </div>
+        </form>
       </div>
-    </a>
+    </section>
 
-    <!-- Product 3 -->
-    <a class="card-link" href="product.html">
-      <div class="card">
-        <img src="product3.jpg" alt="Featured product 3">
-        <h3>Organic Raw Honey</h3>
-        <p>By Nature's Taste, Suhar</p>
-        <p>Price: 40.000 OMR</p>
+    <section class="container py-5 text-center">
+      <h2 class="text-success-emphasis mb-4">How would you like to join?</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="card h-100 bg-white border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="card-title text-success-emphasis">Seller / Creator</h3>
+              <p class="card-text text-secondary">List your products in a few easy steps and reach more customers.</p>
+              <a class="btn btn-success" href="seller_login.html">Sell with SAN'AH</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+        <div class="card h-100 bg-white border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="card-title text-success-emphasis">Buyer</h3>
+            <p class="card-text text-secondary">Browse local handmade products and order in one place.</p>
+            <a class="btn btn-success" href="buyer_login.html">Start shopping</a>
+          </div>
+        </div>
       </div>
-    </a>
-  </div>
+    </div>
+      
+    </section>
 
-  <!-- ========== Featured seller: photo, short story and link ========== -->
-  <div class="hero">
-    <h2>Featured seller</h2>
 
-    <!-- Seller photo -->
-    <img class="seller-img" src="seller.jpg" alt="Featured seller">
+    <section class="container py-4 text-center">
+      <h2 class="text-success-emphasis mb-4">Browse by category</h2>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="fashion.jpg" class="card-img-top" alt="Fashion and clothing">
+            <div class="card-body">
+               <h3 class="h5 card-title"><a class="link-success text-decoration-none" href="product.html">Fashion &amp; Clothing</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="art.jpg" class="card-img-top" alt="Art and crafts">
+            <div class="card-body">
+              <h3 class="h5 card-title"><a class="link-success text-decoration-none" href="product.html">Art &amp; Crafts</a></h3>
+            </div>
+          </div>
+        </div>
 
-    <!-- Seller story -->
-    <h3>Teen and Athar | An Omani Craftsman's Journey</h3>
-    <p>
-      In the historic lanes of Bahla—Oman's iconic heartland of traditional pottery—Salem Al-Busaidi sits at his water-powered potter’s wheel inside his family workshop. 
-      Having learned the art of pottery from his father at the age of ten, Salem grew up immersed in a craft that has spanned centuries of Omani heritage.
-      What inspires Salem's creations is the majestic landscape and architectural spirit of Bahla itself.</p>
-    <p>He draws inspiration from the intricate geometric motifs carved into ancient fortresses and the warm, earthy hues of the local terrain. 
-      Through every piece he molds, Salem aims to preserve authentic Omani pottery while infusing a sleek, modern touch that complements contemporary homes.
-      The creation process for each piece begins with harvesting and carefully purifying local clay from the wadis of Bahla, followed by hand-kneading to achieve a flawless texture. 
-      Using steady hands on the wheel, Salem shapes pitchers, cups, and traditional Jahla water jars one by one. 
-      The pieces are left to dry naturally in the shade before Salem hand-engraves unique traditional patterns using simple carving tools.</p>
-    <p>Finally, they are fired in high-temperature kilns to ensure durability and strength.
-      Through SAN'AH, Salem shares a piece of Oman's soul and rich Bahla craftsmanship with every home.
-    </p>
-    <a class="button" href="creators.html">Meet our sellers</a>
-  </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="decor.jpg" class="card-img-top" alt="Home decor">
+            <div class="card-body">
+              <h3 class="h5 card-title"><a class="link-success text-decoration-none" href="product.html">Home Decor</a></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="food.jpg" class="card-img-top" alt="Food">
+            <div class="card-body">
+              <h3 class="h5 card-title"><a class="link-success text-decoration-none" href="product.html">Food</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      
+    <section class="container py-5 text-center">
+      <h2 class="text-success-emphasis mb-4">Featured products</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <a href="product.html" class="text-decoration-none text-dark">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="product1.jpg" class="card-img-top" alt="Handcrafted Omani Pottery Set">
+              <div class="card-body">
+                <h3 class="h5 card-title">Handcrafted Omani Pottery Set</h3>
+                <p class="card-text text-secondary">By Teen and Athar, Bahla</p>
+                <p class="fw-bold">Price: 10.000 OMR</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+        <a href="product.html" class="text-decoration-none text-dark">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="product2.jpg" class="card-img-top" alt="Handcrafted Crochet Amigurumi Toys">
+            <div class="card-body">
+              <h3 class="h5 card-title">Handcrafted Crochet Amigurumi Toys</h3>
+              <p class="card-text text-secondary">By Yarn and Stories, Muscat</p>
+              <p class="fw-bold">Price: 3.000 OMR</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <a href="product.html" class="text-decoration-none text-dark">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="product3.jpg" class="card-img-top" alt="Organic Raw Honey">
+            <div class="card-body">
+              <h3 class="h5 card-title">Organic Raw Honey</h3>
+              <p class="card-text text-secondary">By Nature's Taste, Suhar</p>
+              <p class="fw-bold">Price: 40.000 OMR</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    </section>
+
+    <section class="container py-5">
+      <h2 class="text-success-emphasis text-center mb-4">Gallery</h2>
+      <div id="sanahGallery" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#sanahGallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#sanahGallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#sanahGallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner rounded shadow-sm">
+          <div class="carousel-item active">
+            <img src="handmade1.jpg" class="d-block w-100" alt="Handmade local craft">
+          </div>
+          <div class="carousel-item ">
+            <img src="fashion1.jpg" class="d-block w-100" alt="Local fashion product">
+          </div>
+          <div class="carousel-item ">
+            <img src="food1.jpg" class="d-block w-100" alt="Local food product">
+          </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#sanahGallery" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#sanahGallery" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    
+    <section class="container-fluid bg-success-subtle py-5">
+      <div class="container text-center">
+        <h2 class="text-success-emphasis mb-4">Featured seller</h2>
+        <img class="img-fluid rounded border border-3 border-success mb-3"
+             src="seller.jpg" alt="Featured seller" width="300">
+        <h3 class="h4 text-success-emphasis">Teen and Athar | An Omani Craftsman's Journey</h3>
+        <p class="text-start">
+          In the historic lanes of Bahla—Oman's iconic heartland of traditional pottery—Salem Al-Busaidi sits at his water-powered potter’s wheel inside his family workshop. 
+          Having learned the art of pottery from his father at the age of ten, Salem grew up immersed in a craft that has spanned centuries of Omani heritage.
+          What inspires Salem's creations is the majestic landscape and architectural spirit of Bahla itself.
+        </p>
+        <p class="text-start">
+          He draws inspiration from the intricate geometric motifs carved into ancient fortresses and the warm, earthy hues of the local terrain. 
+          Through every piece he molds, Salem aims to preserve authentic Omani pottery while infusing a sleek, modern touch that complements contemporary homes.
+          The creation process for each piece begins with harvesting and carefully purifying local clay from the wadis of Bahla, followed by hand-kneading to achieve a flawless texture. 
+          Using steady hands on the wheel, Salem shapes pitchers, cups, and traditional Jahla water jars one by one. 
+          The pieces are left to dry naturally in the shade before Salem hand-engraves unique traditional patterns using simple carving tools.</p>
+        <p class="text-start">
+          Finally, they are fired in high-temperature kilns to ensure durability and strength.
+          Through SAN'AH, Salem shares a piece of Oman's soul and rich Bahla craftsmanship with every home.
+        </p>
+
+        <a class="btn btn-success" href="creators.html">Meet our sellers</a>
+      </div>
+
+    </section>
+
+    <section class="container py-5 text-center">
+      <h2 class="text-success-emphasis mb-4">Explore more</h2>
+      <div class="row g-3 justify-content-center">
+        <div class="col-12 col-md-4">
+          <a class="btn btn-outline-success w-100" href="questionnaire.html">Questionnaire</a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a class="btn btn-outline-success w-100" href="calculate.html">Shopping Calculator</a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a class="btn btn-outline-success w-100" href="funpage.html">Fun Page</a>
+        </div>
+      </div>
+    </section>
+   </main>
+
+    
+   <div class="bg-warning-subtle text-success-emphasis py-2">
+    <marquee behavior="scroll" direction="left">
+      Welcome to SAN'AH -- Small businesses, big stories. Today is <span id="currentDateTime"></span>.
+    </marquee>
+   </div>
 
   <!-- ========== Footer: project info and quick links ========== -->
-  <footer>
-    <!-- Inline CSS: style written directly on the element -->
-    <p style="color: #FFFFFF;">SAN'AH - A place for local makers and their products.</p>
-    <p style="color: #BFD9F2;">COMP3700 - Sultan Qaboos University - FALL26</p>
-    <p><a href="about_us.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+  <footer class="bg-success-subtle text-success-emphasis text-center py-4">
+    
+    <p class="mb-1">SAN'AH - A place for local makers and their products.</p>
+    <p class="mb-1">COMP3700 - Sultan Qaboos University - FALL26</p>
+    <p class="mb-0">
+      <a class="link-success" href="about_us.html">About Us</a> | 
+      <a class="link-success" href="contact.html">Contact Us</a>
+    </p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/clock.js"></script>
 
 </body>
 </html>
